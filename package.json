@@ -1,0 +1,21 @@
+{
+  "name": "Girlchan_admin",
+  "version": "0.0.1",
+  "license": "MIT License",
+  "main": "girlchan_admin.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vladimir37/Girlchan-admin/"
+  },
+  "scripts": {
+    "start": "node girlchan_admin.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "passport": "^0.3.2"
+  }
+}

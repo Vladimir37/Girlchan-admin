@@ -1,0 +1,4 @@
+{
+    "port_admin": 3001,
+    "max_threads": 100
+}
