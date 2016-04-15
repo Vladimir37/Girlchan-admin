@@ -1,0 +1,11 @@
+extends ../_layout_
+
+block content
+    h2 Login
+    article.login_form
+        form(action="/login" method="POST")
+            input(type="text" name="username" placeholder="Username" required).form-control
+            br
+            input(type="password" name="password" placeholder="Password" required).form-control
+            br
+            button.btn.btn-primary Login

@@ -14,8 +14,10 @@
     "body-parser": "*",
     "cookie-parser": "*",
     "express": "*",
+    "express-session": "^1.13.0",
     "jade": "*",
     "mongoose": "*",
-    "passport": "^0.3.2"
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }
