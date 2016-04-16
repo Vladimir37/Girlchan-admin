@@ -4,11 +4,11 @@ block content
     h2 Languages
     ul
         - each lang in langs
-            li.lang_name=lang.name
+            li.first_name=lang.name
                 b=" (" + lang.addr + ")"
                 ul
                     - each board in boards
-                        li.board_name=board.addr + " - " + board.names[lang.addr]
+                        li.second_name=board.addr + " - " + board.names[lang.addr]
     article.panel.panel-primary
         article(data-toggle="collapse" data-target=".panel-body").panel-heading Create new language
         article.panel-body.collapse

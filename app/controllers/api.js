@@ -31,6 +31,24 @@ class API {
             errors.e500(req, res, next);
         });
     }
+    static board(req, res, next) {
+        var board_addr = req.body.addr;
+        models.Lang.find().then(function(langs) {
+            var board_names = {};
+            langs.forEach(function(lang) {
+                board_names[lang.addr] = req.body["lang_" + lang.addr];
+            });
+            return models.Board.create({
+                addr: board_addr,
+                names: board_names
+            });
+        }).then(function() {
+            res.redirect('/boards#success');
+        }).catch(function(err) {
+            console.log(err);
+            errors.e500(req, res, next);
+        });
+    }
 }
 
 module.exports = API;

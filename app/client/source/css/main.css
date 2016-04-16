@@ -10,15 +10,21 @@
     margin: auto;
     text-align: center;
 }
-.lang_name {
+.first_name {
     font-size: 20px;
     font-weight: bold;
     color: black;
 }
-.board_name {
+.second_name {
     font-size: 18px;
     font-weight: normal;
 }
 .panel-heading {
     cursor: pointer;
+}
+.nav {
+    width: 500px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background: #ffffff;
 }

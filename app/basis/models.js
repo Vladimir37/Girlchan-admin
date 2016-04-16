@@ -45,15 +45,4 @@ models.Post = mongoose.model('Post', postSchema);
 
 mongoose.connect('mongodb://localhost/girlchan');
 
-//models.Board.findOne({
-//    addr: 'te'
-//}).then(function (doc) {
-//    doc.set('names.fr', 'TESTES');
-//    return doc.save();
-//}).then(function (qw) {
-//    console.log(qw);
-//}).catch(function (err) {
-//    console.log(err);
-//});
-
 module.exports = models;

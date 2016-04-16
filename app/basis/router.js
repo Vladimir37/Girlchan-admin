@@ -9,8 +9,10 @@ var router = express.Router();
 router.get('/', view.login.bind(view));
 router.get('/panel', auth, view.panel.bind(view));
 router.get('/langs', auth, view.langs.bind(view));
+router.get('/boards', auth, view.boards.bind(view));
 
 router.post('/login', api.login.bind(api));
 router.post('/lang', api.language.bind(api));
+router.post('/board', api.board.bind(api));
 
 module.exports = router;

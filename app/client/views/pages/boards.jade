@@ -1,0 +1,21 @@
+extends ../_layout_
+
+block content
+    h2 Languages
+    ul
+        - each board in boards
+            li.first_name=board.addr
+                ul
+                    - each name, lang in board.names
+                        li.second_name
+                            b=lang + " - " + name
+    article.panel.panel-primary
+        article(data-toggle="collapse" data-target=".panel-body").panel-heading Create new board
+        article.panel-body.collapse
+            form(action="/board" method="POST")
+                input(type="text" name="addr" placeholder="Board address" required).form-control
+                h4 Board names
+                - each lang in langs
+                    input(type="text" name="lang_" + lang.addr placeholder=lang.addr required).form-control
+                    br
+                button.btn.btn-primary Create board
