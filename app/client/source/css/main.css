@@ -10,3 +10,15 @@
     margin: auto;
     text-align: center;
 }
+.lang_name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.board_name {
+    font-size: 18px;
+    font-weight: normal;
+}
+.panel-heading {
+    cursor: pointer;
+}

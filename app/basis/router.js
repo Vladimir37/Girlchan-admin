@@ -1,13 +1,16 @@
 var express = require('express');
 
-var Views = require('../controllers/views');
-var API = require('../controllers/api');
+var view = require('../controllers/views');
+var api = require('../controllers/api');
+var auth = require('./auth').auth;
 
 var router = express.Router();
-var view = new Views();
 
 router.get('/', view.login.bind(view));
+router.get('/panel', auth, view.panel.bind(view));
+router.get('/langs', auth, view.langs.bind(view));
 
-router.post('/login', API.login);
+router.post('/login', api.login.bind(api));
+router.post('/lang', api.language.bind(api));
 
 module.exports = router;

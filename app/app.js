@@ -3,9 +3,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
 
-var strategy = require('./basis/auth');
+var auth = require('./basis/auth');
 var router = require('./basis/router');
 var errors = require('./basis/errors');
 
@@ -19,7 +18,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-passport.use(strategy);
+passport.use(auth.strategy);
 app.use(passport.initialize());
 app.use(passport.session());
 

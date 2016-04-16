@@ -18,4 +18,14 @@ var Strategy = new localStrategy(function(username, password, done) {
     });
 });
 
-module.exports = Strategy;
+function auth(req, res, next) {
+    if(req.isAuthenticated()) {
+        next();
+    }
+    else {
+        res.redirect('/#unlog');
+    }
+}
+
+exports.strategy = Strategy;
+exports.auth = auth;
