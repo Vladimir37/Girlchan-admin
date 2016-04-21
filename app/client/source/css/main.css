@@ -25,6 +25,6 @@
 .nav {
     width: 500px;
 }
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover {
     background: #ffffff;
 }

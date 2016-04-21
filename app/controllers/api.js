@@ -1,4 +1,5 @@
 var passport = require('passport');
+var execa = require('execa');
 
 var models = require('../basis/models');
 var errors = require('../basis/errors');
@@ -48,6 +49,10 @@ class API {
             console.log(err);
             errors.e500(req, res, next);
         });
+    }
+    static restart(req, res, next) {
+        execa.shell('forever restartall');
+        res.redirect('/panel');
     }
 }
 

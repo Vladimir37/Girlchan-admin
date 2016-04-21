@@ -14,5 +14,6 @@ router.get('/boards', auth, view.boards.bind(view));
 router.post('/login', api.login.bind(api));
 router.post('/lang', api.language.bind(api));
 router.post('/board', api.board.bind(api));
+router.post('/restart', api.restart.bind(api));
 
 module.exports = router;
